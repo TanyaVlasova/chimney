@@ -1,0 +1,171 @@
+.benefits{
+    width: 100%;
+    display: flex;
+
+    &__benefits-text{
+        flex: 0 1 47%;
+    }
+
+    &__benefits-image{
+        flex: 0 1 53%;
+    }
+}
+
+
+.benefits-text{
+    
+
+    &__section-title{
+        margin-bottom: 41px;
+    }
+
+    &__section-title::before{
+        background: none;
+    }
+
+    &__benefits-list{
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    *:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.section-title__color{
+    color: #E33E54;
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: block;
+    line-height: calc(63 / 50) * 100%;
+    margin-top: 3px;
+}
+
+
+.benefits-image{
+    position: relative;
+
+    &__blob{
+        width: 766px;
+        position: absolute;
+        top: -10px;
+        right: -165px;
+    }
+    
+    &__chimney{
+        width: 477px;
+        position: absolute;
+        top: -38px;
+        right: -55px;
+    }
+}
+
+
+.benefits-list{
+
+    &__item{
+        margin-bottom: 24px;
+        position: relative;
+        padding-left: 26px;
+        line-height: calc(24 / 16) * 100%;
+    }
+
+    &__item:last-child{
+        margin-bottom: 0;
+    }
+
+    &__item:before{
+        content: '';
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: #EA6628;
+        position: absolute;
+        top: 7px;
+        left: 0;
+    }
+}
+
+
+@media (max-width: 1600px) {
+
+    .benefits-image__blob{
+        width: 560px;
+        top: 60px;
+        right: 0;
+    }
+    .benefits-image__chimney{
+        width: 350px;
+        top: 35px;
+        right: 70px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .benefits-image__blob{
+        width: 448px;
+        top: 60px;
+        right: 30px;
+    }
+    .benefits-image__chimney{
+        width: 280px;
+        top: 35px;
+        right: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    
+    .benefits-image__blob{
+        width: 336px;
+        top: 100px;
+        right: 30px;
+    }
+    .benefits-image__chimney{
+        width: 210px;
+        top: 90px;
+        right: 80px;
+    }
+    .section-title__color{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .benefits{
+
+        &__benefits-image{
+            display: none;
+        }
+
+        &__benefits-text{
+            flex: 0 1 100%;
+        }
+    }
+
+    .benefits-text__section-title{
+        margin-bottom: 21px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .section-title__color{
+        font-size: 30px;
+    }
+
+    .benefits-text__benefits-list{
+        margin-left: 15px;
+    }
+
+    .benefits-list__item{
+        font-size: 14px;
+        line-height: calc(24 / 14) * 100%;
+        
+    }
+}

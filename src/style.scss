@@ -1,0 +1,277 @@
+@import 'reset-css.scss';
+@import 'fonts.scss';
+
+
+html{
+    max-width: 1920px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.body{
+    max-width: 1920px;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0 15px;    
+}
+
+
+// Отступы между header, container и footer
+
+.body{
+
+    &__header{
+        margin-top: 21px;
+        margin-bottom: 51px;
+    }
+
+    &__footer{
+        margin-top: 136px;
+    }
+}
+
+
+// Отступы между разделами в container
+
+.container{
+    
+    &__about{
+        margin-bottom: 56px;
+    }
+
+    &__benefits{
+        margin-bottom: 130px;
+    }
+
+    &__process{
+        margin-bottom: 99px;
+    }
+
+    &__why-us{
+        margin-bottom: 86px;
+    }
+
+    &__consultation{
+        margin-bottom: 124px;
+    }
+
+    &__video{
+        margin-bottom: 115px;
+    }
+
+    &__portfolio{
+        margin-bottom: 70px;
+    }
+
+    *:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+// Переиспользуемые блоки
+
+//h1
+.title{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: calc(73 / 60) * 100%;
+}
+
+//h2
+.section-title{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: calc(49 / 40) * 100%;
+    position: relative;
+}
+//красная полоса у h2
+.section-title:before{
+    content: '';
+    width: 75px;
+    height: 5px;
+    background-color: #E33E54;
+    display: inline-block;
+    position: absolute;
+    top: -16px;
+    left: 0; 
+}
+
+//стандартный текст
+.text{
+    font-size: 16px;
+    line-height: calc(30 / 16) * 100%;
+}
+
+.text__color{
+    color: #E33E54;
+    font-weight: 600;
+}
+
+//социальные сети
+.socials{
+    display: flex;
+    align-items: center;
+    
+    &__item{
+        margin-right: 16px;
+    }
+
+    &__item:last-child{
+        margin-right: 0;
+    }
+}
+
+@import 'components/header/header.scss';
+
+@import 'components/main/about.scss';
+@import 'components/main/benefits.scss';
+@import 'components/main/process.scss';
+@import 'components/main/why-us.scss';
+@import 'components/main/consultation.scss';
+@import 'components/main/video.scss';
+@import 'components/main/portfolio.scss';
+
+@import 'components/footer/footer.scss';
+
+
+// Отступы между разделами до 768px
+
+@media (max-width: 768px){
+    .body{
+
+        &__header{
+            margin-top: 9px;
+            margin-bottom: 56px;
+        }
+
+        &__footer{
+            margin-top: 56px;
+        }
+    }
+
+    .container{
+
+        &__about{
+            margin-bottom: 25px;
+        }
+
+        &__benefits{
+            margin-bottom: 72px;
+        }
+
+        &__process{
+            margin-bottom: 61px;
+        }
+
+        &__why-us{
+            margin-bottom: 52px;
+        }
+
+        &__consultation{
+            margin-bottom: 74px;
+        }
+
+        &__video{
+            margin-bottom: 72px;
+        }
+
+        &__portfolio{
+            margin-bottom: 56px;
+        }
+    }
+}
+
+
+// Отступы между разделами до 480px
+
+@media (max-width: 480px){
+    .body{
+
+        &__header{
+            margin-top: 0;
+            margin-bottom: 41px;
+        }
+
+        &__footer{
+            margin-top: 56px;
+        }
+    }
+
+    .container{
+
+        &__about{
+            margin-bottom: 18px;
+        }
+
+        &__benefits{
+            margin-bottom: 52px;
+        }
+
+        &__process{
+            margin-bottom: 56px;
+        }
+
+        &__why-us{
+            margin-bottom: 41px;
+        }
+
+        &__consultation{
+            margin-bottom: 64px;
+        }
+
+        &__video{
+            margin-bottom: 64px;
+        }
+
+        &__portfolio{
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+// Медиа-запросы для переиспользуемых блоков
+
+@media (max-width: 1024px) {
+    .title{
+        font-size: 52px;
+    }
+    
+    .section-title{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title{
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title{
+        font-size: 30px;
+    }
+
+    .section-title{
+        font-size: 20px;
+        line-height: calc(30 / 20) * 100%;
+    }
+
+    .text{
+        font-size: 14px;
+        line-height: calc(26 / 14) * 100%;
+    }
+}

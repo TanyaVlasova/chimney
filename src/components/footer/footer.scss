@@ -1,0 +1,191 @@
+.footer{
+    width: 100%;
+    min-height: 350px;
+    display: grid;
+    background-color: #0C2F33;
+
+    &__footer-box{
+        margin: auto;
+    }
+}
+
+
+.footer-box{
+    max-width: 1218px;
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+    color: #fff;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.footer-subtitle{
+    font-size: 22px;
+    line-height: calc(27 / 22) * 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.footer-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 19px;
+
+    &__item{
+        line-height: calc(17 / 14) * 100%;
+    }
+
+    &__link{
+        color: #fff;
+    }
+}
+
+
+.catalog{
+
+    &__footer-subtitle{
+        margin-bottom: 18px;
+    }
+
+    &__footer-list{
+        margin-bottom: 19px;
+    }
+
+    *:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.info{
+
+    &__footer-subtitle{
+        margin-bottom: 18px;
+    }
+
+    &__footer-list{
+        margin-bottom: 19px;
+    }
+
+    *:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.work-hours{
+
+    &__footer-subtitle{
+        margin-bottom: 18px;
+    }
+
+    &__work-hours{
+        margin-bottom: 8px;
+    }
+
+    &__address{
+        margin-bottom: 25px;
+    }
+
+    &__socials{
+        margin-bottom: 25px;
+    }
+
+    *:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.hours{
+    line-height: calc(24 / 14) * 100%;
+    position: relative;
+    padding-left: 25px;
+    font-family: 'Lato';
+    font-weight: 400;
+
+    &__color{
+        color: #4C858B;
+    }
+
+    &:before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        background: url('../../images/clock.svg') center no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+.address{
+    line-height: calc(24 / 14) * 100%;
+    position: relative;
+    padding-left: 25px;
+    font-family: 'Lato';
+    font-weight: 400;
+
+    &:before{
+        content: '';
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 2px;
+        left: -1px;
+        background: url('../../images/location.svg') center no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1280px) {
+    .footer-box{
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-box{
+        max-width: 820px;
+        font-size: 13px;
+    }
+    
+    .footer-subtitle{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer{
+        min-height: 70px;
+    }
+
+    .footer-box{
+        grid-template-columns: 1fr;
+
+        &__catalog,
+        &__info{
+            display: none;
+        }
+    }
+
+    .work-hours{
+
+        &__footer-subtitle,
+        &__hours,
+        &__address{
+            display: none;
+        }
+
+        &__socials{
+            justify-content: center;
+        }
+    }
+}
